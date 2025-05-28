@@ -1,38 +1,357 @@
-.App {
-  text-align: center;
+body {
+  background-color: #e0ecf6;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h4 {
+  font-size: 12px;
+  color: #afb5ba;
+}
+
+p {
+  font-size: 10px;
+}
+
+.app {
+  height: 100vh;
+}
+
+.app-layout {
+  background-color: #ffff;
+  margin: 20px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 6px 0px #cdc6c6;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.body-main {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  gap: 15px;
+}
+
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #2d359a;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.search-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+  .app-layout {
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .header {
+    grid-template-columns: 200px 1fr auto;
+  }
+  
+  .header .col-2 .search-bar {
+    padding: 10px 200px 10px 10px;
+  }
+  
+  .body-main {
+    grid-template-columns: 200px 1fr 300px;
+  }
+  
+  .sidebar {
+    padding: 15px;
+  }
+  
+  .dashboard-section {
+    padding: 0 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .app-layout {
+    border-radius: 20px;
+    margin: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header {
+    grid-template-columns: auto 1fr auto;
+    gap: 15px;
+  }
+  
+  .header .col-1 {
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+  
+  .header .col-2 {
+    display: none; 
+  }
+  
+  .header .col-3 {
+    border-radius: 15px;
+    padding: 15px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .search-icon {
+    display: block;
+  }
+  
+  .body-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    display: none; 
+  }
+  
+  .dashboard-section {
+    order: 1;
+    padding: 0 15px;
+  }
+  
+  .calender-section {
+    border-radius: 15px;
+    order: 2;
+  }
+  
+  .anatomy-body {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card-list{
+    max-width: none;
+  }
+  
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  
+  .day-name {
+    font-size: 10px;
+    padding: 4px 0;
+  }
+  
+  .date-number {
+    font-size: 14px;
+  }
+  
+  .event-box {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+  
+  .appointment-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-layout {
+    margin: 0;
+    border-radius: 0;
+    padding: 10px;
+  }
+  
+  .header .col-1 {
+    border-radius: 10px;
+    padding: 10px;
+    gap: 8px;
+  }
+  
+  .header .col-1 h1 {
+    font-size: 1.2rem;
+  }
+  
+  .menu-icon {
+    font-size: 18px;
+    padding: 8px;
+  }
+  
+  .header .col-3 {
+    border-radius: 10px;
+    padding: 10px;
+    gap: 8px;
+  }
+  
+  .search-icon {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .header .col-3 button,
+  .header .col-3 .user-profile {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .dashboard-section {
+    padding: 0 10px;
+  }
+  
+  .sidebar {
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .calender-section {
+    border-radius: 10px;
+  }
+  
+  .calendar-container {
+    padding: 15px;
+  }
+  
+  .schedule-container {
+    padding: 0 15px;
+  }
+  
+  .anatomy .anatomy-section .anatomy-img {
+    width: 80px;
+  }
+  
+  .label {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  
+  .heart {
+    top: 18%;
+    right: -110%;
+  }
+  
+  .leg {
+    bottom: 20%;
+    left: -100%;
+  }
+  
+  .anatomy-section {
+    padding: 10px 30px;
+  }
+  
+  .card-list {
+    max-width: none;
+  }
+  
+  .activity-container {
+    padding: 15px;
+  }
+  
+  .bar {
+    width: 4px;
+  }
+  
+  .bar-chart {
+    gap: 4px;
+  }
+  
+  .day-label {
+    font-size: 10px;
+  }
+  
+  .calendar-grid {
+    gap: 2px;
+  }
+  
+  .day-name {
+    font-size: 9px;
+  }
+  
+  .date-number {
+    font-size: 12px;
+  }
+  
+  ul li {
+    gap: 8px;
+    padding: 8px;
+  }
+  
+  ul li span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .col-1 h1 {
+    font-size: 1rem;
+  }
+  
+  .anatomy .anatomy-section .anatomy-img {
+    width: 60px;
+  }
+  
+  .label {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+  
+  .anatomy-section {
+    padding: 10px 20px;
+  }
+  
+  .calendar-container {
+    padding: 10px;
+  }
+  
+  .schedule-container {
+    padding: 0 10px;
+  }
+  
+  .bar {
+    width: 3px;
+  }
+  
+  .calendar-grid {
+    gap: 1px;
+  }
+  
+  .day-name {
+    font-size: 8px;
+  }
+  
+  .date-number {
+    font-size: 10px;
+  }
+  
+  .event-list {
+    font-size: 8px;
   }
 }

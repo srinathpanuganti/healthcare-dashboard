@@ -1,0 +1,39 @@
+.anatomy .anatomy-section {
+  border-radius: 14px;
+}
+
+.anatomy .anatomy-section .anatomy-img {
+  width: 115px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.label {
+  position: absolute;
+  background: #ffffff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+}
+
+.heart {
+  top: 18%;
+  right: -80%;
+  background: #4f46e5;
+  color: #fff;
+}
+
+.leg {
+  bottom: 20%;
+  left: -80%;
+  background: #06b6d4;
+  color: #fff;
+}
+
+.anatomy-section {
+  background-color: #f5f9ff;
+  padding: 10px 58px;
+}

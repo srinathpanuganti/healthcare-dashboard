@@ -1,0 +1,56 @@
+.schedule-container {
+  padding: 0 30px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.schedule-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0px;
+}
+
+.day-section {
+  margin-bottom: 24px;
+}
+
+.day-heading {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.schedule-card {
+  background-color: #d9ddf7;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
+}
+
+.item-time {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}

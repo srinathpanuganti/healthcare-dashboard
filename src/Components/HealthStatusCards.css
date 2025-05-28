@@ -1,0 +1,48 @@
+.svg-inline--fa {
+  height: 0.9em;
+}
+
+.emoji {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 300px;
+}
+
+.card {
+  background-color: #f5f9ff;
+  border-radius: 20px;
+  padding: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0;
+}
+
+.date {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 4px 0 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 4px;
+}

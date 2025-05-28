@@ -1,0 +1,30 @@
+.sidebar {
+  background-color: #f5f9ff;
+  border-bottom-left-radius: 30px;
+  padding: 20px;
+}
+
+.sidebar nav {
+  justify-items: center;
+}
+
+.sidebar nav ul {
+  padding: 0;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  color: #a0a0a0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 5px 0;
+}

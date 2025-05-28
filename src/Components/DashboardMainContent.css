@@ -1,0 +1,15 @@
+.dashboard-section {
+  padding: 0 30px;
+}
+
+.anatomy-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.anatomy-body {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  gap: 20px;
+}
